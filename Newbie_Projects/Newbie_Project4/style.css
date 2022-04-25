@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --color-cyan: #65E2DC;
+    --color-orange: #FFB865;
+    --card-bg: #FA7353;
+    --section-bg: #191826;
+
+    --transition: all 400ms ease;
+}
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'IBM Plex Sans',sans-serif;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+section.header{
+    margin-bottom: 10rem;
+}
+
+section.header h1 {
+    width: 100%;
+}
+
+section.header p {
+    width: 100%;
+}
+
+.main{
+    background-image: url("./assets/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-position-y: -18%;
+}
+
+.Card{
+    flex-direction: column;
+    background: var(--section-bg);
+    border-radius: 1rem;
+    background-image: url("./assets/bg-pattern-2.svg");
+    background-repeat: no-repeat;
+    background-position: top -20% center;
+}
+
+.mobile{
+    margin: -7rem 0 3rem;
+    justify-content: center;
+}
+
+.phone{
+    width: 14rem;
+}
+
+.price{
+    background: var(--card-bg);
+    border-radius: 1rem;
+    max-width: 25rem;
+    margin: auto;
+}
+
+.price__value{
+    position: relative;
+    font-size: 3rem;
+}
+
+.price__value::after{
+    content: ' /small';
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: absolute;
+    top: 30%;
+}
+
+.btn1{
+    background: var(--section-bg);
+    border-radius: calc(1rem - 5px);
+    transition: var(--transition);
+}
+
+.btn1:hover{
+    background: var(--color-cyan);
+}
+
+.btn2{
+    background: white;
+    border-radius: calc(1rem - 5px);
+    transition: var(--transition);
+}
+
+.btn2:hover {
+    background: var(--color-orange);
+}
+
+footer{
+    margin-top: 2rem;
+}
+
+
+
+/* ============================= Media Quries For Tablets =================== */
+
+@media(min-width: 600px){
+    p{
+        font-size: 0.9rem;
+    }
+
+    .main {
+        background-image: url("./assets/bg-main-tablet.png");
+        background-repeat: no-repeat;
+        background-position-x: 66%;
+        background-position-y: -68%;
+        z-index: -2;
+    }
+
+
+    .Card{
+        gap: 4rem;
+        position: relative;
+        background-position: top -40%;
+    }
+
+    .mobile {
+        justify-content: start;
+        margin-left: 10%;
+    }
+
+    .phone {
+        justify-content: start !important;
+        width: 16rem;
+    }
+
+    .price{
+        position: absolute;
+        bottom: -15rem;
+        right: 3rem;
+    }
+
+    .price h1{
+        font-size: 3rem;
+    }
+
+    .price__value::after{
+        font-size: 1rem;
+    }
+
+    footer{
+        margin-top: 18rem;
+    }
+
+    footer .Div1 {
+        gap: 2rem;
+    }
+    
+    footer .Div1 p {
+        flex: 1;
+    }
+}
+
+@media(min-width: 768px){
+    .main::before {
+        content: '';
+        background-image: url('./assets/bg-pattern-1.svg');
+        width: 312px;
+        height: 468px;
+        position: absolute;
+        right: 0;
+    }
+
+    section.header h1 {
+        width: 65%;
+    }
+    
+    section.header p {
+        width: 65%;
+    }
+}
+
+
+@media (min-width: 1024px){
+    
+    .main {
+        background-image: url("./assets/bg-main-desktop.png");
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 50%;
+    }
+
+    footer{
+        gap: 2rem;
+    }
+}
+
